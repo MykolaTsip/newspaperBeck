@@ -15,7 +15,7 @@ Newspaper.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    text: {
+    url: {
         type: DataTypes.STRING,
         allowNull: false
     },

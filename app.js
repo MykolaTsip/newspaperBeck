@@ -27,7 +27,7 @@ server.use(cors({methods: 'POST', origin: (origin, callback) => {
 
 
 server.use('/users', userRouter)
-
+server.use('/newspaper', newspaperRouter)
 
 server.use('*', (err, req, res, next) => {
     res.status(err.status)

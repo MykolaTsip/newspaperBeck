@@ -19,7 +19,6 @@ module.exports = {
 
 
     LoginUser: async (req, res) => {
-
         const {password} = req.body
         const user = req.user
 
@@ -45,4 +44,9 @@ module.exports = {
         res.json(statues.OK)
     },
 
+    validAccess: (req, res) => {
+
+
+        res.json(200);
+    }
 }

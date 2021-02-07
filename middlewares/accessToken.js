@@ -10,9 +10,9 @@ module.exports = async (req, res, next) => {
 
     const {access_token, user_id} = await tokens.getTokenByParams({access_token: token})
 
-    const {activate} = await  userService.getOneUserByParams({id: user_id})
+    const validUser = await  userService.getOneUserByParams({id: user_id})
 
-    if (!access_token && !activate) {
+    if (!access_token && !validUser) {
         return next(new ErrorHandle(
             ErrorEnum.UNAUTHORIZED_BAD_TOKEN.message,
             ErrorStatusEnum.UNAUTHORIZED,
